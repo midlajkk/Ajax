@@ -1,8 +1,8 @@
 class script(object):
-    START_TXT = """𝙷𝙴𝙻𝙾 {},
-𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 <a href=https://t.me/{}>{}</a> Iam a powerful autofilter bot with some more featues.. ⚡💫💫💫"""
-    HELP_TXT = """𝙷𝙴𝚈 {}
-𝙷𝙴𝚁𝙴 𝙸𝚂 𝚃𝙷𝙴 𝙷𝙴𝙻𝙿 ."""
+    START_TXT = """𝘏𝘌𝘓𝘓𝘖 {},
+𝘔𝘠 𝘕𝘈𝘔𝘌 𝘐𝘚 <a href=https://t.me/{}>{}</a> 𝘐𝘢𝘮 𝘢 𝘱𝘰𝘸𝘦𝘳𝘧𝘶𝘭 𝘵𝘦𝘭𝘦𝘨𝘳𝘢𝘮 𝘣𝘰𝘵.. ⚡💫💫💫"""
+    HELP_TXT = """𝘏𝘌𝘓𝘓𝘖 {}
+𝘏𝘌𝘙𝘌 𝘐𝘚 𝘏𝘌𝘓𝘗 ."""
     ABOUT_TXT = """ 𝙼𝚈 𝙽𝙰𝙼𝙴: {}
  𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
  𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
