@@ -86,16 +86,16 @@ async def next_page(bot, query):
         off_set = offset - 10
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f"🌹 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
+            [InlineKeyboardButton(" 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"), InlineKeyboardButton(f" 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages")]
         )
     elif off_set is None:
-        btn.append([InlineKeyboardButton(f"🌹 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
+        btn.append([InlineKeyboardButton(f" 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"), InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")])
     else:
         btn.append(
             [
-                InlineKeyboardButton("⬅️ 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
-                InlineKeyboardButton(f"🌹 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
-                InlineKeyboardButton("𝗡𝗲𝘅𝘁 ➡️", callback_data=f"next_{req}_{key}_{n_offset}")
+                InlineKeyboardButton(" 𝗕𝗮𝗰𝗸", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton(f" 𝗣𝗮𝗴𝗲 {round(int(offset)/10)+1} / {round(total/10)}", callback_data="pages"),
+                InlineKeyboardButton("𝗡𝗲𝘅𝘁 ", callback_data=f"next_{req}_{key}_{n_offset}")
             ],
         )
     try:
@@ -395,17 +395,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('⚚ ΛᎠᎠ MΞ ϮԾ YԾUᏒ GᏒԾUᎮ ⚚', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-            ],[
-            InlineKeyboardButton('💠 CHΛИИΞL 💠', url='https://t.me/MWUpdatez'),
-            InlineKeyboardButton('💠 UᎮDΛTΞS 💠', url='https://t.me/OpusTechz')
-            ],[      
+        buttons = [[     
             InlineKeyboardButton('♻️ HΞLᎮ ♻️', callback_data='help'),
             InlineKeyboardButton('CONTACT ME', url='https://t.me/ABoutAadhi'),
             InlineKeyboardButton('♻️ ΛBOUT ♻️', callback_data='about')
-            ],[
-            InlineKeyboardButton('✅ SUBSCᏒIBΞ  ✅', url='https://youtube.com/channel/UCf_dVNrilcT0V2R--HbYpMA')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)      
         await query.message.edit_text(
